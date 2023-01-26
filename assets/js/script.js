@@ -1,18 +1,26 @@
 //Start the Game 
 function startGame() {
-    timeLeft();
-    showQuestion();
+ 
 }
 
-function showQuestion() {
-    let quizQuestions = document.createElement("h2");
-    quizQuestions.textContent = [thisQuestion].question;
+// function startTimer() {
 
-}
+  let startTimer = setInterval(function() {
+    myTimer();
+  }, 1000);
 
-function timeLeft() {
 
-}
+  //When start button clicked, calls startTimer function    
+  timer.addEventListener('click', startTimer);
+
+
+// function showQuestion() {
+//     let quizQuestions = document.createElement("h2");
+//     quizQuestions.textContent = [thisQuestion].question;
+
+// }
+
+
 
 //Click the START! button -> Event Listener
 startButton.addEventListener("click"), function (event) {
