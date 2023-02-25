@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./assets/cs/style.css">
+    <link rel="stylesheet" href="./assets/cs/game.css">
+</head>
+<body>
+    <div class="container">
+        <div id="game" class="justify-center flex-column">
+            <div id="hudisplay">
+                <div class="hudisplay-item">
+                    <p id="progressText" class="hudisplay-prefix">
+                        Question
+                    </p>
+                    <div id="progressBar">
+                        <div id="progressBarFull"></div>
+                    </div>
+                </div>
+                <div class="hudisplay-item">
+                    <p class="hudisplay-prefix">
+                        Score
+                    </p>
+                    <h1 class="hudisplay-main-text" id="score">
+                        0
+                    </h1>
+                </div>
+            </div>
+            <h1 id="question">Question?</h1>
+            <div class="choice-container">
+                <p class="choice-prefix">A</p>
+                <p class="choicetext" data-number="1">Choice</p>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

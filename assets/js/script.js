@@ -1,44 +1,23 @@
-//Start the Game 
-function startGame() {
- 
-}
-
-// function startTimer() {
-
-  let startTimer = setInterval(function() {
-    myTimer();
-  }, 1000);
-
-
-  //When start button clicked, calls startTimer function    
-  timer.addEventListener('click', startTimer);
-
-
-// function showQuestion() {
-//     let quizQuestions = document.createElement("h2");
-//     quizQuestions.textContent = [thisQuestion].question;
-
-// }
-
-
-
-//Click the START! button -> Event Listener
-startButton.addEventListener("click"), function (event) {
-    event.stopPropagation();
-    startButton.disabled = true;
-    startGame();
-}
-
 //DOM Variables 
-let startButton = document.querySelector('#startBtn');
+const startButton = document.querySelector('#startBtn');
+const question = document.querySelector('#question');
+const choices = Array.from(document.querySelectorAll('.choice-text'));
+const score = document.querySelector('#score');
+
 
 //Question Variables
-let correct = 0;
-let thisQuestion = 0;
-let timeLeft = 150;
+var currentQuestion = {};
+var answers = true;
+var scoreNum = 0;
+var correct = 0;
+var thisQuestion = 0;
+var availableQuestions = [];
+
+
+var timeLeft = 150;
 
 //Quiz Question Array//
-let quizQuestions = [
+var quizQuestions = [
     {
         question: "What data types are supported by Javascript? a: boolean and string, b: symbol and number, c:null and undefined",
         answerChoices: ["a", "b", "all of the above", "c"],
@@ -55,7 +34,60 @@ let quizQuestions = [
         correct: 0,
     },
 
+];
+
+const SCORE = 100
+const MAX = 3
+
+startGame = () => {
+    questionCounter = 0 
+    score = 0 
+    availableQuestions = [...questions]
+    getNewQuestion()
+}
+
+// getNewQuestion = () => {
+//     if(availableQuestions.length === 0 || qu)
+// };
 
 
 
-]
+
+
+
+
+
+
+
+
+
+//  //Start the Game 
+//  function startGame() {
+ 
+//  }
+ 
+//  // function startTimer() {
+ 
+//    let startTimer = setInterval(function() {
+//      myTimer();
+//    }, 1000);
+ 
+ 
+//    //When start button clicked, calls startTimer function    
+//    timer.addEventListener('click', startTimer);
+ 
+ 
+//  // function showQuestion() {
+//  //     let quizQuestions = document.createElement("h2");
+//  //     quizQuestions.textContent = [thisQuestion].question;
+ 
+//  // }
+ 
+ 
+ 
+//  //Click the START! button -> Event Listener
+//  startButton.addEventListener("click"), function (event) {
+//      event.stopPropagation();
+//      startButton.disabled = true;
+//      startGame();
+//  }
