@@ -10,6 +10,8 @@ var timeEl = document.querySelector(".time");
 // Selects element by id
 var mainEl = document.getElementById("main");
 
+
+
 var secondsLeft = 60;
 
   //Quiz Question Array//

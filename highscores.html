@@ -8,6 +8,18 @@
 </head>
 <body>
     <h1 class="highscores">HIGH SCORES</h1>
+        <div id="final-score" class="hide"></div>
+        <div id="high-scores" class="hide">
+            <form>
+                <label for="initials">Please enter your initials:</label>
+                <input type="text" id="initials" name="initials"><br><br>
+            </form>
+    
+            <button id="submit-button" onclick="addNewScore()">Submit</button>
+            <ol id="score-list"></ol>
+        </div>
+
+    <script src="./assets/js/highscores.js"></script>
     
 </body>
 </html>
