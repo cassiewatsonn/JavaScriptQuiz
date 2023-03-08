@@ -6,7 +6,7 @@ var timeEl = document.querySelector(".time");
 // Selects element by id
 var mainEl = document.getElementById("main");
 
-var secondsLeft = 60;
+var secondsLeft = 10;
 
 function setTime() {
 
@@ -36,10 +36,10 @@ function sendMessage() {
 
     //TODO: Redirect to highscores.html when timer runs out 
     let timeOutEventListener = function(){
-        window.location.href = './highscores.html';
+        window.location.href = "highscores.html";
       }
       
-      timer.addEventListener('timeout', timeOutEventListener);
+      timeEl.addEventListener('timeout', timeOutEventListener);
   
 
   }
@@ -87,7 +87,8 @@ function showQuestion(){
 
     for (var i = 0; i < currentQuestion.options.length; i++){
        var choice = currentQuestion.options[i];
-       let buttonNum = document.getElementById("btn" + i);
+       let currentBtn = `btn${i + 1}`;
+       let buttonNum = document.getElementById(currentBtn);
        buttonNum.textContent = choice;
     }
 };
