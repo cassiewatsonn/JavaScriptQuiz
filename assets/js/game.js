@@ -6,7 +6,7 @@ var timeEl = document.querySelector(".time");
 // Selects element by id
 var mainEl = document.getElementById("main");
 
-var secondsLeft = 10;
+var secondsLeft = 60;
 
 function setTime() {
 
@@ -76,7 +76,7 @@ var quizQuestions = [
 
 ];
 
-  //TODO: Render Quiz Questions 
+  // Render Quiz Questions 
 
 let questionIndex = 0; 
 let questionText = document.getElementById("questionText");
@@ -92,4 +92,28 @@ function showQuestion(){
        buttonNum.textContent = choice;
     }
 };
+
+// TODO: check answer from user input from the answer array and if wrong, deduct 10 seconds
+let timerPenalty = 5;
+
+function checkAnswer(index){
+
+    console.log(index);
+
+    let currentQuestion = quizQuestions[questionIndex];
+    
+    if (currentQuestion.choice === index) {
+        score++;
+    }
+    else {
+        timeEl = timeEl - timerPenalty;
+    }
+    questionIndex++;
+    if (questionIndex < quizQuestions.length){
+        showQuestion();
+    }
+
+}; 
+
+
 
