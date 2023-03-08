@@ -9,33 +9,23 @@
     <link rel="stylesheet" href="./assets/cs/game.css">
 </head>
 <body>
-    <div class="container">
-        <div id="game" class="justify-center flex-column">
-            <div id="hudisplay">
-                <div class="hudisplay-item">
-                    <p id="progressText" class="hudisplay-prefix">
-                        Question
-                    </p>
-                    <div id="progressBar">
-                        <div id="progressBarFull"></div>
-                    </div>
-                </div>
-                <div class="hudisplay-item">
-                    <p class="hudisplay-prefix">
-                        Score
-                    </p>
-                    <h1 class="hudisplay-main-text" id="score">
-                        0
-                    </h1>
-                </div>
-            </div>
-            <h1 id="question">Question?</h1>
-            <div class="choice-container">
-                <p class="choice-prefix">A</p>
-                <p class="choicetext" data-number="1">Choice</p>
-            </div>
+
+    <header class="header">
+        <h1 class="time" style="text-align:center;"></h1>
+        <div id="main"></div>
+        <!-- <div id="timer" class="timer hide">Time Left: <span id="timeLeft" class="timeLeft"></span></div> -->
+        <!-- <h1 class="title">JavaScript Fundamentals Quiz!</h1> -->
+    </header>
+    <section id="questionArea" class="hide">
+        <h2 id="questionText"></h2>
+        <div id="answer-buttons" class="btn-grid hide">
+            <button class="btn" id="btn1"></button>
+            <button class="btn" id="btn2"></button>
+            <button class="btn" id="btn3"></button>
+            <button class="btn" id="btn4"></button>
         </div>
-    </div>
-    <script src="./assets/js/script.js"></script>
+    </section>
+
+    <script src="./assets/js/game.js"></script>
 </body>
-</html>
+</html> 
