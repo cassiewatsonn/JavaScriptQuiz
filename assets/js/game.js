@@ -1,5 +1,9 @@
 // TODO: MAKE TIMER!
-
+let questionIndex = 0; 
+let questionText = document.getElementById("questionText");
+let questionArea = document.getElementById("questionArea");
+let timerPenalty = 5;
+let score = 0;
 // Selects element by class
 var timeEl = document.querySelector(".time");
 
@@ -7,6 +11,31 @@ var timeEl = document.querySelector(".time");
 var mainEl = document.getElementById("main");
 
 var secondsLeft = 60;
+
+  //Quiz Question Array//
+  var quizQuestions = [
+    {
+        question: "What data types are supported by Javascript? a: boolean and string, b: symbol and number, c:null and undefined",
+        options: ["a", "b", "all of the above", "c"],
+        correct: 2,
+    },
+    {
+        question: "What HTML element do we put JavaScript?",
+        options: ["<javascript>", "<script>", "<link>", "<js"],
+        correct: 1,
+    },
+    {
+        question: "Where is the correct place to insert JavaScript?",
+        options: ["the bottom of the <body>", "the <head>", "the top of the <body>", "the <header>"],
+        correct: 0,
+    },
+    {
+        question: "What data types are supported by Javascript? a: boolean and string, b: symbol and number, c:null and undefined",
+        options: ["a", "b", "all of the above", "c"],
+        correct: 2,
+    },
+
+];
 
 function setTime() {
 
@@ -22,9 +51,10 @@ function setTime() {
       // Calls function to create and append image
       sendMessage();
     }
-    showQuestion();
+    
 
   }, 1000);
+  showQuestion();
 }
 
 // Function to create and append colorsplosion image
@@ -51,42 +81,16 @@ function sendMessage() {
 
 
 
-  //Quiz Question Array//
-var quizQuestions = [
-    {
-        question: "What data types are supported by Javascript? a: boolean and string, b: symbol and number, c:null and undefined",
-        options: ["a", "b", "all of the above", "c"],
-        correct: 2,
-    },
-    {
-        question: "What HTML element do we put JavaScript?",
-        options: ["<javascript>", "<script>", "<link>", "<js"],
-        correct: 1,
-    },
-    {
-        question: "Where is the correct place to insert JavaScript?",
-        options: ["the bottom of the <body>", "the <head>", "the top of the <body>", "the <header>"],
-        correct: 0,
-    },
-    {
-        question: "What data types are supported by Javascript? a: boolean and string, b: symbol and number, c:null and undefined",
-        options: ["a", "b", "all of the above", "c"],
-        correct: 2,
-    },
-
-];
 
   // Render Quiz Questions 
 
-let questionIndex = 0; 
-let questionText = document.getElementById("questionText");
 
 function showQuestion(){
     let currentQuestion = quizQuestions[questionIndex];
     questionText.textContent = currentQuestion.question;
 
-    for (var i = 0; i < currentQuestion.options.length; i++){
-       var choice = currentQuestion.options[i];
+    for (let i = 0; i < currentQuestion.options.length; i++){
+       let choice = currentQuestion.options[i];
        let currentBtn = `btn${i + 1}`;
        let buttonNum = document.getElementById(currentBtn);
        buttonNum.textContent = choice;
@@ -94,7 +98,7 @@ function showQuestion(){
 };
 
 // TODO: check answer from user input from the answer array and if wrong, deduct 10 seconds
-let timerPenalty = 5;
+
 
 function checkAnswer(index){
 
@@ -102,18 +106,33 @@ function checkAnswer(index){
 
     let currentQuestion = quizQuestions[questionIndex];
     
-    if (currentQuestion.choice === index) {
+    if (currentQuestion.correct === index) {
         score++;
     }
     else {
         timeEl = timeEl - timerPenalty;
     }
+    console.log(questionIndex);
     questionIndex++;
     if (questionIndex < quizQuestions.length){
         showQuestion();
     }
+    else{
+    questionArea.style.display="none";
+    }
+    
 
 }; 
 
+for (let i = 0; i < 4; i++){
+    let currentBtn = `btn${i + 1}`;
+    let buttonNum = document.getElementById(currentBtn);
+    buttonNum.addEventListener("click", function(){
+        checkAnswer(i)
+    });
+ }
 
+
+ // will need to work on local storage if I want to use a different html for highscores/endpage
+ 
 
