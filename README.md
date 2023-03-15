@@ -2,25 +2,33 @@
 
 ## Description
 
-This JavaScript Basic's Quiz is for users looking to test their knowledge on JavaScript. This project is built to create a space for developers to test and build on their basic understanding of JavaScript. The main goal is to provide randomized questions for users to answer about JavaScript. 
+This JavaScript Basic's Quiz is for users looking to test their knowledge on JavaScript. This project is built to create a space for developers to test and build on their basic understanding of JavaScript. The main goal is to provide randomized questions for users to answer about JavaScript.
 
 As an aspriring web developer I want to take a quiz to recieve questions about JavaScript so I can maintain and build on my knowledge to further my studies.
 
-## Installation 
-N/A
+## Table of Contents
+
+- [Usage](#usage)
+- [How to Contribute](#contributions)
+- [Credits](#credits)
+- [Questions](#questions)
+- [License](#license)
 
 ## Usage
-When I click the start button on the quiz, then a timer starts and I am presented with a question to answer. When I answer the question, then I will be presented with another question. If I answer a question incorrectly then, time is subtracted from the clock. When, all of the questions are answered or the timer reaches 0, then the game is over. When the game is over, then I can save my initials and my score to the scoreboard. 
 
+To begin the quiz please follow this [JavaScript Quiz Link](https://cassiewatsonn.github.io/JavaScriptQuiz/).
 
-## ![JavaScript Fundamentals Quiz](./assets/images/quizpicture.png)
+When I click the 'PLAY' button on the quiz, then a timer starts and I am presented with a question to answer. When I answer the question, then I will be presented with another question. If I answer a question incorrectly then, ten seconds are is subtracted from the clock. When, all of the questions are answered or the timer reaches 0, then the game is over. When the game is over, then I can save my initials and my score to the scoreboard!
 
-## Link 
-https://cassiewatsonn.github.io/JavaScriptQuiz/
+## ![JavaScript Quiz Home](./assets/images/1.png)
 
+## ![JavaScript Quiz Question](./assets/images/2.png)
 
-## Credits 
-N/A 
+## ![JavaScript Quiz HighScores](./assets/images/3.png)
+
+## Credits
+
+Thank you to my study partner [Rebecca Lawrence](https://github.com/rkml14) and my tutor Andres Jiminez!
 
 ## License
 
@@ -45,3 +53,13 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Contributions
+
+Please contact me if you would like to contribute. You can find my information under the [Questions](#questions) section.
+
+## Questions
+
+[Cassandra Watson's GitHub Profile](https://github.com/cassiewatsonn)
+
+For any additional questions, please contact me by email at cassiewatsonn@gmail.com !

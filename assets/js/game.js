@@ -64,7 +64,7 @@ function setTime() {
 
 // Function to create and append colorsplosion image
 function sendMessage() {
-    timeEl.textContent = "Game Over, redirecting you to High Scores";
+    timeEl.textContent = "Game Over! Please enter your initials to view the High Scores.";
     // var imgEl = document.createElement("img");
     // imgEl.setAttribute("src", "images/image_1.jpg");
     // mainEl.appendChild(imgEl);
